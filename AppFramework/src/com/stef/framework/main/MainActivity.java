@@ -1,4 +1,11 @@
-package com.stef.framework;
+package com.stef.framework.main;
+
+import com.stef.framework.R;
+import com.stef.framework.R.id;
+import com.stef.framework.R.layout;
+import com.stef.framework.R.menu;
+import com.stef.framework.R.string;
+import com.stef.framework.base.fragment.ActionbarPullToRefreshListFragment;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -44,7 +51,7 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 	public void onNavigationDrawerItemSelected(int position) {
 		// update the main content by replacing fragments
 		FragmentManager fragmentManager = getSupportFragmentManager();
-		fragmentManager.beginTransaction().replace(R.id.container, PlaceholderFragment.newInstance(position + 1)).commit();
+		fragmentManager.beginTransaction().replace(R.id.container, new ActionbarPullToRefreshListFragment()).commit();
 	}
 
 	public void onSectionAttached(int number) {

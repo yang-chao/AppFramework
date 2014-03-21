@@ -1,4 +1,11 @@
-package com.stef.framework;
+package com.stef.framework.main;
+
+import com.stef.framework.R;
+import com.stef.framework.R.drawable;
+import com.stef.framework.R.id;
+import com.stef.framework.R.layout;
+import com.stef.framework.R.menu;
+import com.stef.framework.R.string;
 
 import android.support.v7.app.ActionBarActivity;
 import android.app.Activity;
