@@ -1,7 +1,5 @@
 package com.stef.framework.sample.fragment;
 
-import java.util.List;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;

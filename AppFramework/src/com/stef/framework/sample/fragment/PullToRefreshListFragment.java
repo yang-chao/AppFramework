@@ -9,7 +9,6 @@ import com.stef.framework.sample.fragment.model.SampleModel;
 import uk.co.senab.actionbarpulltorefresh.extras.actionbarcompat.PullToRefreshLayout;
 import uk.co.senab.actionbarpulltorefresh.library.ActionBarPullToRefresh;
 import uk.co.senab.actionbarpulltorefresh.library.listeners.OnRefreshListener;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.ListFragment;
 import android.util.Log;
@@ -60,9 +59,6 @@ public class PullToRefreshListFragment extends ListFragment implements OnRefresh
 
 	@Override
 	public void onRefreshStarted(View view) {
-		// Hide the list
-		setListShown(false);
-
 		SampleModel.getSamples(this, this);
 	}
 
