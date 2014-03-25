@@ -6,11 +6,11 @@ import com.android.volley.Request;
 import com.android.volley.Response.ErrorListener;
 import com.android.volley.Response.Listener;
 import com.android.volley.VolleyError;
-import com.stef.framework.base.fragment.BaseVolleyListFragment;
+import com.stef.framework.base.fragment.VolleyListFragment;
 import com.stef.framework.sample.fragment.model.SampleData;
 import com.stef.framework.sample.fragment.model.SampleModel;
 
-public class ListFragment2 extends BaseVolleyListFragment<SampleData> {
+public class SampleListFragment extends VolleyListFragment<SampleData> {
 	
 	private final String TAG = getClass().getName();
 
@@ -21,8 +21,7 @@ public class ListFragment2 extends BaseVolleyListFragment<SampleData> {
 
 	@Override
 	protected void onReciveResponse(SampleData response) {
-		setListAdapter(new PullToRefreshListAdapter(getActivity(), response));
-		setListShown(true);
+		setListAdapter(new SampleListAdapter(getActivity(), response));
 	}
 
 	@Override

@@ -9,6 +9,8 @@ public class SampleData {
 
 	private String vid;
 	private String title;
+	@SerializedName("cover")
+	private String cover;
 	@SerializedName("recommend")
 	private List<Sample> samples = new ArrayList<Sample>();
 	
@@ -23,6 +25,12 @@ public class SampleData {
 	}
 	public void setTitle(String title) {
 		this.title = title;
+	}
+	public String getCover() {
+		return cover;
+	}
+	public void setCover(String cover) {
+		this.cover = cover;
 	}
 	public List<Sample> getSamples() {
 		return samples;

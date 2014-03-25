@@ -13,12 +13,12 @@ import com.stef.framework.base.cache.ImageCacheManager;
 import com.stef.framework.sample.fragment.model.Sample;
 import com.stef.framework.sample.fragment.model.SampleData;
 
-public class PullToRefreshListAdapter extends ArrayAdapter<Sample> {
+public class SampleListAdapter extends ArrayAdapter<Sample> {
 
 	private LayoutInflater mInflater;
 	private SampleData mData;
 	
-	public PullToRefreshListAdapter(Context context, SampleData data) {
+	public SampleListAdapter(Context context, SampleData data) {
 		super(context, R.layout.sample_adapter_pulltorefresh_1);
 		mInflater = LayoutInflater.from(context);
 		mData = data;

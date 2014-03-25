@@ -16,8 +16,17 @@
     <style name="AppTheme" parent="AppBaseTheme">
         <!-- All customizations that are NOT specific to a particular API-level can go here. -->
     </style>
-    
-    <!-- base -->
 
+    <!-- base -->
+    <style name="base_listview_style" parent="@android:style/Widget.ListView">
+        <item name="android:cacheColorHint">@null</item>
+        <item name="android:drawSelectorOnTop">false</item>
+        <item name="android:alwaysDrawnWithCache">true</item>
+        <!-- <item name="android:listSelector">@drawable/base_list_selector</item> -->
+        <item name="android:divider">@null</item>
+        <item name="android:dividerHeight">0dp</item>
+        <item name="android:fadingEdgeLength">0dp</item>
+        <!-- <item name="android:scrollbarThumbVertical">@drawable/base_list_scrollbar_handle</item> -->
+    </style>
 
 </resources>

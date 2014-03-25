@@ -1,14 +1,5 @@
 package com.stef.framework.main;
 
-import com.stef.framework.R;
-import com.stef.framework.R.id;
-import com.stef.framework.R.layout;
-import com.stef.framework.R.menu;
-import com.stef.framework.R.string;
-import com.stef.framework.base.fragment.ActionbarPullToRefreshListFragment;
-import com.stef.framework.sample.fragment.ListFragment2;
-import com.stef.framework.sample.fragment.PullToRefreshListFragment;
-
 import android.app.Activity;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
@@ -22,6 +13,10 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
+
+import com.stef.framework.R;
+import com.stef.framework.sample.fragment.SampleFragment;
+import com.stef.framework.sample.fragment.SampleListFragment;
 
 public class MainActivity extends ActionBarActivity implements NavigationDrawerFragment.NavigationDrawerCallbacks {
 
@@ -55,10 +50,13 @@ public class MainActivity extends ActionBarActivity implements NavigationDrawerF
 		FragmentManager fragmentManager = getSupportFragmentManager();
 		if (position == 0) {
 			fragmentManager.beginTransaction().replace(R.id.container, 
-					new ListFragment2()).commit();
+					new SampleFragment()).commit();
+		} else if (position == 1) {
+			fragmentManager.beginTransaction().replace(R.id.container, 
+					new SampleListFragment()).commit();
 		} else {
 			fragmentManager.beginTransaction().replace(R.id.container, 
-					new PullToRefreshListFragment()).commit();
+					new SampleListFragment()).commit();
 		}
 	}
 
